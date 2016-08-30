@@ -432,7 +432,12 @@
 					<i class="fa fa-quote-left" area-hidden="true"></i>
 				</div>
 				<div class="col-md-10">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</p>
+					<?php 
+                        $sql = "SELECT text FROM clients WHERE id = 1";
+                        $query = mysqli_query($db_con,$sql);
+                        $row = mysqli_fetch_assoc($query);
+                    ?>                 
+                    <p><?= $row['text']?> </p>
 				</div>
 				<div class="col-md-1">
 					<i class="fa fa-quote-right" area-hidden="true"></i>
@@ -443,7 +448,12 @@
 					<i class="fa fa-quote-left" area-hidden="true"></i>
 				</div>
 				<div class="col-md-10">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</p>
+					<?php 
+                        $sql = "SELECT text FROM clients WHERE id = 2";
+                        $query = mysqli_query($db_con,$sql);
+                        $row = mysqli_fetch_assoc($query);
+                    ?>                 
+                    <p><?= $row['text']?> </p>
 				</div>
 				<div class="col-md-1">
 					<i class="fa fa-quote-right" area-hidden="true"></i>
@@ -454,7 +464,12 @@
 					<i class="fa fa-quote-left" area-hidden="true"></i>
 				</div>
 				<div class="col-md-10">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</p>
+					<?php 
+                        $sql = "SELECT text FROM clients WHERE id = 3";
+                        $query = mysqli_query($db_con,$sql);
+                        $row = mysqli_fetch_assoc($query);
+                    ?>                 
+                    <p><?= $row['text']?> </p>
 				</div>
 				<div class="col-md-1">
 					<i class="fa fa-quote-right" area-hidden="true"></i>

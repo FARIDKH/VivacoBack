@@ -27,7 +27,7 @@
                         ?> <td><?= $value ?></td> <?php
                     } ?>
                         <td>
-                            <a class="btn btn-danger" href="delete.php?id=<?= $_GET['id'] ?>">DELETE</a>
+                            <a class="btn btn-danger" href="delete.php?id=<?= $row['id'] ?>">DELETE</a>
                         </td>
                       </tr> <?php
                 }
@@ -36,6 +36,8 @@
                 ?>
             </table>
        </div>
+        <button class="btn btn-default"><a href="../admin.php">BACK to ADMIN PANEL</a></button>
+        
     </div>
     
 </body>

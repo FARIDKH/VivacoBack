@@ -9,9 +9,20 @@
    <?php
     
     include "../db.php";
-    
-    $id = $_GET['id'];
-    
+        $sql = "SELECT * FROM features";
+        $query = mysqli_query($db_con,$sql);
+        $row = mysqli_fetch_assoc($query);
+
+        $id = $_GET['id']; 
+    if(isset($_POST['feature_deleteYES'])){
+        
+        
+        $sql1 = "DELETE FROM features WHERE id = $id";
+        $query1 = mysqli_query($db_con,$sql1);
+        $row1 = mysqli_fetch_assoc($query1);
+
+        header ("Location:feature.php");    
+    }
     
     
     ?>
@@ -21,11 +32,13 @@
             <h1>DELETE FEATURE</h1>
             <div class="col-md-12 alert alert-danger">
                <form action="" method="post">
-                    <input type="submit" class="btn btn-danger" value="YES" name="feature_delete">
-                    <input type="submit" class="btn btn-default" value="NO" name="feature_delete">
+                    <input type="submit" class="btn btn-danger" value="YES" name="feature_deleteYES">
+                    <input type="submit" class="btn btn-default" value="NO" name="feature_deleteNO">
                 </form>
             </div>
         </div>
+        <button class="btn btn-default"><a href="feature.php">BACK to ADMIN PANEL</a></button>
+        <button class="btn btn-default"><a href="feature.php">BACK to FEATURE</a></button>
     </div>
 </body>
 </html>
